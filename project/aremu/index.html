@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aremu — Arianna Quattropani</title>
+  <meta name="description" content="Aremu, a photographic project by Arianna Quattropani." />
+  <meta name="author" content="Arianna Quattropani" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body class="project-page" data-project="aremu">
+  <header class="site-header">
+    <a class="brand" href="../../">ARIANNA QUATTROPANI</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-item" href="../../">Home</a>
+      <div class="nav-dropdown">
+        <a class="nav-item active" href="../residual-green/" aria-haspopup="true">Projects</a>
+        <div class="dropdown-panel" aria-label="Projects submenu">
+          <a data-project-link="residual-green" href="../residual-green/">Residual Green</a>
+          <a data-project-link="faraway-so-close" href="../faraway-so-close/">Faraway So Close</a>
+          <a data-project-link="aremu" href="../aremu/">Aremu</a>
+        </div>
+      </div>
+      <a class="nav-item" href="../../#selected">Selected</a>
+      <a class="nav-item" href="../../#about">About</a>
+    </nav>
+  </header>
+
+  <main class="project-shell">
+    <aside class="project-intro">
+      <p class="eyebrow">PROJECTS</p>
+      <h1 id="project-title">Aremu</h1>
+      <div id="project-text" class="project-text"></div>
+    </aside>
+
+    <section class="gallery-area" aria-label="Project gallery">
+      <div class="view-switch" role="group" aria-label="Gallery view">
+        <button class="view-btn is-active" type="button" data-view="grid">Grid</button>
+        <button class="view-btn" type="button" data-view="fullscreen">Fullscreen</button>
+      </div>
+
+      <div id="project-gallery" class="project-grid"></div>
+
+      <div id="project-fullscreen" class="project-fullscreen" hidden>
+        <button class="viewer-hit viewer-prev" type="button" aria-label="Previous image"></button>
+        <figure class="viewer-figure">
+          <img id="viewer-image" alt="" />
+          <figcaption>
+            <span id="viewer-caption"></span>
+            <span id="viewer-counter"></span>
+          </figcaption>
+        </figure>
+        <button class="viewer-hit viewer-next" type="button" aria-label="Next image"></button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../assets/projects.js"></script>
+</body>
+</html>
