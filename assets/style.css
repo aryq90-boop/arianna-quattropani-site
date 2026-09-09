@@ -116,23 +116,23 @@ button { font: inherit; }
 .home-slide {
   position: absolute;
   inset: 0;
+  margin: 0;
   opacity: 0;
-  background-size: cover;
-  background-position: center;
-  transition: opacity .5s ease;
+  background: #fff;
+  transition: opacity .45s ease;
 }
 .home-slide.is-active { opacity: 1; }
-.hero-hit {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 30%;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
+.home-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-.hero-hit-left { left: 0; }
-.hero-hit-right { right: 0; }
+.home-slide.fit-contain img {
+  object-fit: contain;
+  background: #fff;
+}
 
 /* PROJECT ------------------------------------------------------------- */
 .project-page {
