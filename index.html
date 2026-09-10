@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,6 @@
   >
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -21,14 +19,13 @@
     html,
     body {
       margin: 0;
-      padding: 0;
       width: 100%;
       min-height: 100%;
     }
 
     body {
-      background: #ffffff;
-      color: #000000;
+      background: #fff;
+      color: #000;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
@@ -38,26 +35,16 @@
       text-decoration: none;
     }
 
-
-    /* =========================================================
-       HEADER
-    ========================================================= */
+    /* HEADER */
 
     .site-header {
       width: 100%;
       height: 82px;
-
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
-
       padding: 0 3vw;
-
-      background: #ffffff;
     }
-
-
-    /* HOME + PROJECTS */
 
     .nav-left {
       display: flex;
@@ -65,18 +52,12 @@
       gap: 48px;
     }
 
-
-    /* SELECTED + ABOUT */
-
     .nav-center {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       gap: 54px;
     }
-
-
-    /* NAME + INSTAGRAM */
 
     .identity {
       display: flex;
@@ -85,152 +66,96 @@
       gap: 9px;
     }
 
-
     .menu-link {
       position: relative;
-
       padding: 8px 0;
-
       font-size: 14px;
       font-weight: 600;
-
       letter-spacing: 0.025em;
       text-transform: uppercase;
     }
 
-
-    /* SMALL LINE ON HOVER */
-
     .menu-link::after {
       content: "";
-
       position: absolute;
-
       left: 50%;
       bottom: 1px;
-
       width: 0;
       height: 1px;
-
-      background: #000000;
-
+      background: #000;
       transform: translateX(-50%);
-
       transition: width 0.18s ease;
     }
-
 
     .menu-link:hover::after {
       width: 23px;
     }
 
-
     .name {
       font-size: 15px;
       font-weight: 800;
-
       letter-spacing: 0.015em;
       text-transform: uppercase;
-
       white-space: nowrap;
     }
-
 
     .instagram {
       width: 17px;
       height: 17px;
-
       display: flex;
       align-items: center;
       justify-content: center;
     }
-
 
     .instagram svg {
       width: 17px;
       height: 17px;
-
-      stroke: #000000;
+      stroke: #000;
     }
 
-
-
-    /* =========================================================
-       HOMEPAGE
-    ========================================================= */
+    /* MAIN */
 
     .homepage {
       min-height: calc(100vh - 82px);
-
       display: grid;
-
-      grid-template-columns:
-        minmax(0, 63%)
-        minmax(260px, 37%);
-
+      grid-template-columns: minmax(0, 63%) minmax(260px, 37%);
       gap: 5vw;
-
       align-items: center;
-
-      padding:
-        4vh
-        4vw
-        6vh;
+      padding: 4vh 4vw 6vh;
     }
 
-
-
-    /* =========================================================
-       PHOTO AREA
-    ========================================================= */
+    /* PHOTO LEFT */
 
     .photo-area {
       width: 100%;
-      min-height: 68vh;
-
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-
     .photo-area img {
       display: block;
-
       width: auto;
       height: auto;
-
       max-width: 100%;
       max-height: 68vh;
-
       object-fit: contain;
-
       filter: grayscale(100%);
     }
 
-
-
-    /* =========================================================
-       PROJECT TITLES
-    ========================================================= */
+    /* VERTICAL PROJECT TITLES RIGHT */
 
     .projects {
       height: 58vh;
-
       display: flex;
-
       align-items: center;
       justify-content: flex-start;
-
       gap: clamp(42px, 5vw, 88px);
     }
 
-
     .project-link {
       height: 100%;
-
       display: flex;
-
       align-items: center;
       justify-content: center;
 
@@ -238,28 +163,20 @@
 
       font-size: clamp(22px, 2.15vw, 35px);
       font-weight: 300;
-
       letter-spacing: 0.035em;
       text-transform: uppercase;
-
       white-space: nowrap;
 
       transition: opacity 0.18s ease;
     }
 
-
     .project-link:hover {
       opacity: 0.42;
     }
 
-
-
-    /* =========================================================
-       TABLET
-    ========================================================= */
+    /* TABLET */
 
     @media (max-width: 950px) {
-
       .site-header {
         padding: 0 22px;
       }
@@ -282,159 +199,86 @@
 
       .homepage {
         grid-template-columns: 60% 40%;
-
-        padding:
-          35px
-          25px
-          45px;
-
+        padding: 35px 25px 45px;
         gap: 30px;
       }
 
       .projects {
         gap: 28px;
       }
-
     }
 
-
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
+    /* MOBILE */
 
     @media (max-width: 650px) {
-
       .site-header {
         height: auto;
-
         display: flex;
         flex-wrap: wrap;
-
-        padding: 20px;
-
         gap: 16px;
+        padding: 20px;
       }
-
 
       .nav-left {
         gap: 20px;
       }
 
-
       .nav-center {
         margin-left: auto;
-
         gap: 20px;
       }
 
-
       .identity {
         width: 100%;
-
         justify-content: flex-end;
       }
 
-
       .homepage {
         display: block;
-
-        padding:
-          35px
-          20px
-          50px;
+        padding: 35px 20px 50px;
       }
-
 
       .photo-area {
-        min-height: 45vh;
-
         margin-bottom: 40px;
       }
-
 
       .photo-area img {
         width: 100%;
         max-height: none;
       }
 
-
       .projects {
         height: 300px;
-
         justify-content: center;
-
         gap: 28px;
       }
-
 
       .project-link {
         font-size: 19px;
       }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
-  <!-- HEADER -->
-
   <header class="site-header">
 
-
     <nav class="nav-left">
-
-      <a
-        class="menu-link"
-        href="./"
-      >
-        Home
-      </a>
-
-
-      <a
-        class="menu-link"
-        href="#projects"
-      >
-        Projects
-      </a>
-
+      <a class="menu-link" href="./">Home</a>
+      <a class="menu-link" href="#projects">Projects</a>
     </nav>
-
-
 
     <nav class="nav-center">
-
-      <a
-        class="menu-link"
-        href="#"
-      >
-        Selected
-      </a>
-
-
-      <a
-        class="menu-link"
-        href="#"
-      >
-        About
-      </a>
-
+      <a class="menu-link" href="#">Selected</a>
+      <a class="menu-link" href="#">About</a>
     </nav>
-
-
 
     <div class="identity">
 
       <span class="name">
         Arianna Quattropani
       </span>
-
 
       <a
         class="instagram"
@@ -443,7 +287,6 @@
         rel="noopener"
         aria-label="Instagram"
       >
-
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -451,65 +294,27 @@
           stroke-linecap="round"
           stroke-linejoin="round"
         >
-
-          <rect
-            x="3"
-            y="3"
-            width="18"
-            height="18"
-            rx="5"
-          ></rect>
-
-          <circle
-            cx="12"
-            cy="12"
-            r="4"
-          ></circle>
-
-          <circle
-            cx="17.5"
-            cy="6.5"
-            r=".7"
-            fill="#000"
-            stroke="none"
-          ></circle>
-
+          <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+          <circle cx="12" cy="12" r="4"></circle>
+          <circle cx="17.5" cy="6.5" r=".7" fill="#000" stroke="none"></circle>
         </svg>
-
       </a>
 
     </div>
 
-
   </header>
-
-
-
-  <!-- HOMEPAGE -->
 
   <main class="homepage">
 
-
-    <!-- LEFT SIDE: PHOTO WILL GO HERE -->
-
     <section class="photo-area">
-
-      <!--
-      We will add the homepage photograph/slideshow here later.
-      -->
-
+      <img
+        src="assets/home-01.jpg"
+        alt="Photography by Arianna Quattropani"
+        onerror="this.style.display='none'"
+      >
     </section>
 
-
-
-    <!-- RIGHT SIDE: PROJECTS -->
-
-    <nav
-      class="projects"
-      id="projects"
-      aria-label="Projects"
-    >
-
+    <nav class="projects" id="projects">
 
       <a
         class="project-link"
@@ -518,14 +323,12 @@
         Residual Green
       </a>
 
-
       <a
         class="project-link"
         href="project/faraway-so-close/"
       >
         Faraway So Close
       </a>
-
 
       <a
         class="project-link"
@@ -534,13 +337,9 @@
         Aremu
       </a>
 
-
     </nav>
-
 
   </main>
 
-
 </body>
-
 </html>
