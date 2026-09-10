@@ -1,0 +1,299 @@
+:root {
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --line: #cfcfcf;
+  --muted: #8d8d8d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  min-height: 86px;
+  padding: 28px 34px 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.main-nav,
+.identity {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  gap: clamp(24px, 2.5vw, 46px);
+}
+
+.nav-link,
+.brand {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.nav-link {
+  position: relative;
+  padding-bottom: 9px;
+}
+
+/* Small editorial dash on hover/active instead of an underline. */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 14px;
+  height: 1px;
+  background: currentColor;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.18s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link.is-active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.identity {
+  gap: 12px;
+}
+
+.brand {
+  white-space: nowrap;
+  letter-spacing: -0.012em;
+}
+
+.instagram {
+  width: 17px;
+  height: 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagram svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.instagram .dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.home-main {
+  min-height: calc(100vh - 86px);
+  padding: clamp(70px, 12vh, 132px) 34px 34px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: clamp(58px, 7vw, 120px);
+  align-items: end;
+}
+
+/* LEFT: future image/slideshow area. Empty for now by request. */
+.preview-stage {
+  min-width: 0;
+  min-height: min(62vh, 650px);
+  display: flex;
+  align-items: flex-end;
+}
+
+.preview-placeholder {
+  width: 100%;
+  min-height: min(62vh, 650px);
+  background: transparent;
+}
+
+/* RIGHT: editorial black project cells. */
+.project-list {
+  width: min(100%, 520px);
+  justify-self: end;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-bottom: 2px;
+}
+
+.project-card {
+  position: relative;
+  min-height: 96px;
+  padding: 18px 20px 20px;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: end;
+  gap: 10px;
+  overflow: hidden;
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 22px;
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  transform: translateX(8px);
+  opacity: 0;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.project-card:hover,
+.project-card:focus-visible,
+.project-card.is-current {
+  background: var(--white);
+  color: var(--black);
+}
+
+.project-card:hover::after,
+.project-card:focus-visible::after,
+.project-card.is-current::after {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.project-number {
+  align-self: start;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  opacity: 0.62;
+}
+
+.project-title {
+  padding-right: 42px;
+  font-size: clamp(27px, 2.4vw, 42px);
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+@media (min-width: 1500px) {
+  .site-header,
+  .home-main {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .project-list {
+    width: min(100%, 560px);
+  }
+}
+
+@media (max-width: 980px) {
+  .site-header {
+    padding: 24px 22px 14px;
+  }
+
+  .home-main {
+    padding: 56px 22px 26px;
+    grid-template-columns: minmax(0, 1fr) minmax(290px, 0.72fr);
+    gap: 38px;
+  }
+
+  .preview-stage,
+  .preview-placeholder {
+    min-height: 55vh;
+  }
+
+  .project-card {
+    min-height: 86px;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    min-height: auto;
+    padding: 20px 16px 12px;
+    gap: 18px;
+  }
+
+  .main-nav {
+    gap: 17px;
+  }
+
+  .nav-link,
+  .brand {
+    font-size: 12px;
+  }
+
+  .identity {
+    gap: 8px;
+  }
+
+  .instagram {
+    width: 15px;
+    height: 15px;
+  }
+
+  .home-main {
+    min-height: auto;
+    padding: 58px 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    align-items: stretch;
+  }
+
+  /* On mobile, project cells come first; future image preview follows. */
+  .project-list {
+    order: 1;
+    width: 100%;
+  }
+
+  .preview-stage {
+    order: 2;
+    min-height: 42vh;
+  }
+
+  .preview-placeholder {
+    min-height: 42vh;
+  }
+
+  .project-card {
+    min-height: 78px;
+    grid-template-columns: 34px minmax(0, 1fr);
+    padding: 15px 16px 17px;
+  }
+
+  .project-title {
+    font-size: clamp(28px, 9vw, 40px);
+  }
+}

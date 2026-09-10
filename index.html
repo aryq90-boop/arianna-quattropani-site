@@ -6,7 +6,10 @@
   <title>Arianna Quattropani</title>
   <meta name="description" content="Photographic works by Arianna Quattropani. Projects, exhibitions and publications." />
   <meta name="author" content="Arianna Quattropani" />
-  <link rel="stylesheet" href="assets/home-kelly.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/home-editorial.css" />
 </head>
 <body>
   <header class="site-header">
@@ -29,42 +32,30 @@
   </header>
 
   <main class="home-main">
-    <section class="project-list" aria-label="Projects">
-      <a class="project-link is-current"
-         href="project/residual-green/"
-         data-project="residual-green">
-        Residual Green
-      </a>
-      <a class="project-link"
-         href="project/faraway-so-close/"
-         data-project="faraway-so-close">
-        Faraway So Close
-      </a>
-      <a class="project-link"
-         href="project/aremu/"
-         data-project="aremu">
-        Aremu
-      </a>
+    <!-- The image area stays intentionally empty for now.
+         Later we will place the project/slideshow photograph here. -->
+    <section class="preview-stage" aria-label="Project image preview">
+      <div class="preview-placeholder" aria-hidden="true"></div>
     </section>
 
-    <section class="preview" aria-label="Project preview">
-      <figure class="slide is-active" data-project="residual-green">
-        <img src="assets/home-residual-green.jpg" alt="Residual Green by Arianna Quattropani" />
-        <figcaption>Residual Green</figcaption>
-      </figure>
+    <section class="project-list" aria-label="Projects">
+      <a class="project-card" href="project/residual-green/" data-project="residual-green">
+        <span class="project-number">01</span>
+        <span class="project-title">Residual Green</span>
+      </a>
 
-      <figure class="slide" data-project="faraway-so-close">
-        <img src="assets/home-faraway-so-close.jpg" alt="Faraway So Close by Arianna Quattropani" />
-        <figcaption>Faraway So Close</figcaption>
-      </figure>
+      <a class="project-card" href="project/faraway-so-close/" data-project="faraway-so-close">
+        <span class="project-number">02</span>
+        <span class="project-title">Faraway So Close</span>
+      </a>
 
-      <figure class="slide" data-project="aremu">
-        <img src="assets/home-aremu.jpg" alt="Aremu by Arianna Quattropani" />
-        <figcaption>Aremu</figcaption>
-      </figure>
+      <a class="project-card" href="project/aremu/" data-project="aremu">
+        <span class="project-number">03</span>
+        <span class="project-title">Aremu</span>
+      </a>
     </section>
   </main>
 
-  <script src="assets/home-kelly.js"></script>
+  <script src="assets/home-editorial.js"></script>
 </body>
 </html>
