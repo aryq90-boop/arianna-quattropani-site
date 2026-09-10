@@ -6,54 +6,65 @@
   <title>Arianna Quattropani</title>
   <meta name="description" content="Photographic works by Arianna Quattropani. Projects, exhibitions and publications." />
   <meta name="author" content="Arianna Quattropani" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/home-kelly.css" />
 </head>
-<body class="home-page">
+<body>
   <header class="site-header">
-    <a class="brand" href="./">ARIANNA QUATTROPANI</a>
     <nav class="main-nav" aria-label="Main navigation">
-      <a class="nav-item active" href="./">Home</a>
-      <div class="nav-dropdown">
-        <a class="nav-item" href="project/residual-green/" aria-haspopup="true">Projects</a>
-        <div class="dropdown-panel" aria-label="Projects submenu">
-          <a href="project/residual-green/">Residual Green</a>
-          <a href="project/faraway-so-close/">Faraway So Close</a>
-          <a href="project/aremu/">Aremu</a>
-        </div>
-      </div>
-      <a class="nav-item" href="#selected">Selected</a>
-      <a class="nav-item" href="#about">About</a>
+      <a class="nav-link is-active" href="./">Home</a>
+      <a class="nav-link" href="#selected">Selected</a>
+      <a class="nav-link" href="#about">About</a>
     </nav>
+
+    <div class="identity">
+      <a class="brand" href="./">Arianna Quattropani</a>
+      <a class="instagram" href="#" aria-label="Instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3.3" y="3.3" width="17.4" height="17.4" rx="5"></rect>
+          <circle cx="12" cy="12" r="4.1"></circle>
+          <circle cx="17.45" cy="6.75" r="0.9" class="dot"></circle>
+        </svg>
+      </a>
+    </div>
   </header>
 
-  <main class="home-hero" aria-label="Selected photographic works">
-    <figure class="home-slide is-active">
-      <img src="assets/home-01-porto.jpg" alt="Photographic work by Arianna Quattropani: blue sea surface" />
-    </figure>
-    <figure class="home-slide">
-      <img src="assets/home-02-residual-green-portrait.jpg" alt="Residual Green by Arianna Quattropani" />
-    </figure>
-    <figure class="home-slide fit-contain">
-      <img src="assets/home-03-aremu.jpg" alt="Aremu by Arianna Quattropani" />
-    </figure>
-    <figure class="home-slide">
-      <img src="assets/home-04-residual-green-hands.jpg" alt="Residual Green by Arianna Quattropani: hands holding a plant" />
-    </figure>
-    <figure class="home-slide fit-contain">
-      <img src="assets/home-05-faraway-so-close-city.jpg" alt="Faraway So Close by Arianna Quattropani" />
-    </figure>
-    <figure class="home-slide">
-      <img src="assets/home-06-residual-green-landscape.jpg" alt="Residual Green by Arianna Quattropani: forest landscape" />
-    </figure>
-    <figure class="home-slide fit-contain">
-      <img src="assets/home-07-faraway-so-close-yellow.jpg" alt="Faraway So Close by Arianna Quattropani" />
-    </figure>
-    <figure class="home-slide fit-contain">
-      <img src="assets/home-08-faraway-so-close-sea.jpg" alt="Faraway So Close by Arianna Quattropani" />
-    </figure>
+  <main class="home-main">
+    <section class="project-list" aria-label="Projects">
+      <a class="project-link is-current"
+         href="project/residual-green/"
+         data-project="residual-green">
+        Residual Green
+      </a>
+      <a class="project-link"
+         href="project/faraway-so-close/"
+         data-project="faraway-so-close">
+        Faraway So Close
+      </a>
+      <a class="project-link"
+         href="project/aremu/"
+         data-project="aremu">
+        Aremu
+      </a>
+    </section>
 
+    <section class="preview" aria-label="Project preview">
+      <figure class="slide is-active" data-project="residual-green">
+        <img src="assets/home-residual-green.jpg" alt="Residual Green by Arianna Quattropani" />
+        <figcaption>Residual Green</figcaption>
+      </figure>
+
+      <figure class="slide" data-project="faraway-so-close">
+        <img src="assets/home-faraway-so-close.jpg" alt="Faraway So Close by Arianna Quattropani" />
+        <figcaption>Faraway So Close</figcaption>
+      </figure>
+
+      <figure class="slide" data-project="aremu">
+        <img src="assets/home-aremu.jpg" alt="Aremu by Arianna Quattropani" />
+        <figcaption>Aremu</figcaption>
+      </figure>
+    </section>
   </main>
 
-  <script src="assets/home.js"></script>
+  <script src="assets/home-kelly.js"></script>
 </body>
 </html>
